@@ -12,9 +12,7 @@ The predictor combines a **GradientBoosting classifier** with a **Dixon-Coles Po
 
 ### Pipeline
 
-```
 Historical Data → Feature Engineering (25 features) → Train Classifier → Monte Carlo Simulation → Predicted Table
-```
 
 ### Three-Phase Approach
 
@@ -70,11 +68,21 @@ For each league, the predictor outputs:
 
 ## How to Run
 
-### Requirements
+### Prerequisites
+
+- Python 3.10+ (tested on 3.12)
+- pip (Python package manager)
+
+### Install Dependencies
 
 ```bash
-pip install pandas numpy scikit-learn
+pip install pandas numpy scikit-learn openpyxl
 ```
+
+> If you have multiple Python versions installed, use:
+> ```bash
+> python3.12 -m pip install pandas numpy scikit-learn openpyxl
+> ```
 
 ### Run
 
@@ -82,21 +90,21 @@ pip install pandas numpy scikit-learn
 python predict_season.py
 ```
 
-```
-══════════════════════════════════════════════════
-  FOOTBALL SEASON PREDICTOR 2025/26
-  GradientBoosting + Monte Carlo (10,000 sims)
-══════════════════════════════════════════════════
+You will be prompted to choose a league:
 
-  1. Premier League
-  2. La Liga
-  3. Serie A
-  4. Bundesliga
-  5. Ligue 1
-  6. Brasileirão
+    ══════════════════════════════════════════════════
+      FOOTBALL SEASON PREDICTOR 2025/26
+      GradientBoosting + Monte Carlo (10,000 sims)
+    ══════════════════════════════════════════════════
 
-  Choose league (1-6): _
-```
+      1. Premier League
+      2. La Liga
+      3. Serie A
+      4. Bundesliga
+      5. Ligue 1
+      6. Brasileirão
+
+      Choose league (1-6): _
 
 ---
 
@@ -110,19 +118,21 @@ python predict_season.py
 
 ## Project Structure
 
-```
-├── predict_season.py          # Main predictor script (all leagues)
-├── premier-league-full.csv    # 🏴󠁧󠁢󠁥󠁮󠁧󠁿 6,448 matches (2010-2025)
-├── la-liga-full.csv           # 🇪🇸 6,070 matches (2011-2025)
-├── serie-a-full.csv           # 🇮🇹 6,065 matches (2011-2025)
-├── bundesliga-full.csv        # 🇩🇪 4,896 matches (2011-2025)
-├── ligue-1-full.csv           # 🇫🇷 5,753 matches (2011-2025)
-├── brasileirao-full.csv       # 🇧🇷 5,476 matches (2012-2025)
-└── README.md
-```
+| File | Description |
+|------|-------------|
+| predict_season.py | Main predictor script (all leagues) |
+| premier-league-full.csv | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League — 6,448 matches (2010–2025) |
+| la-liga-full.csv | 🇪🇸 La Liga — 6,070 matches (2011–2025) |
+| serie-a-full.csv | 🇮🇹 Serie A — 6,065 matches (2011–2025) |
+| bundesliga-full.csv | 🇩🇪 Bundesliga — 4,896 matches (2011–2025) |
+| ligue-1-full.csv | 🇫🇷 Ligue 1 — 5,753 matches (2011–2025) |
+| brasileirao-full.csv | 🇧🇷 Brasileirão — 5,476 matches (2012–2025) |
+| README.md | This file |
 
 ---
 
 ## License
 
 MIT
+
+
