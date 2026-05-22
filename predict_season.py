@@ -88,7 +88,7 @@ LEAGUES = {
             'Fluminense', 'Gremio', 'Internacional', 'Mirassol', 'Palmeiras',
             'Remo', 'Santos', 'Sao Paulo', 'Vasco', 'Vitoria',
         ],
-        'promoted': ['Chapecoense-SC', 'Coritiba', 'Mirassol', 'Remo'],
+        'promoted': ['Chapecoense-SC', 'Coritiba', 'Athletico-PR', 'Remo'],
         'n_teams': 20,
     },
 }
